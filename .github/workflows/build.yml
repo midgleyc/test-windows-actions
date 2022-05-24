@@ -1,0 +1,16 @@
+name: Windows runner test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+      - run: docker run hello-world
+      - run: docker run ubuntu bash -c 'echo hello world'
